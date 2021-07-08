@@ -1,9 +1,10 @@
-from urllib import parse
 import json
+import os
 import random
 import time
+from urllib import parse
+
 import requests
-import os
 
 baseDelayTime = 1  # 基础延时秒数
 
@@ -138,7 +139,7 @@ def getQRCode():
     req = requests.post(url=genQRCodeURL)
     responseJSON = json.loads(req.text)
     print('请扫描二维码登录')
-    os.system('explorer {}'.format(responseJSON['data']['imagePath']))
+    print(responseJSON['data']['imagePath'])
     return responseJSON['data']['barCodeCacheUserId']
 
 

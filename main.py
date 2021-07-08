@@ -1,10 +1,11 @@
-import WeiBanAPI
 import json
-import time  # time.sleep延时
 import os  # 兼容文件系统
 import random
+import time  # time.sleep延时
 
-tenantCode = '23333'  # 院校ID
+import WeiBanAPI
+
+tenantCode = '4137011066'  # 院校ID
 
 
 def main():
